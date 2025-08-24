@@ -10,7 +10,7 @@ archiso
 nbd
 
 # Boot
-syslinux
+#syslinux
 efibootmgr
 grub
 #os-prober
@@ -18,16 +18,16 @@ grub
 # Filesystem tools
 dosfstools
 e2fsprogs
-exfatprogs
-btrfs-progs
-xfsprogs
-f2fs-tools
+#exfatprogs
+#btrfs-progs
+#xfsprogs
+#f2fs-tools
 #jfsutils
 
 # Network
 networkmanager
 network-manager-applet
-dhcpcd
+#dhcpcd
 wpa_supplicant
 #wireless_tools
 iwd
@@ -43,20 +43,21 @@ xf86-video-vesa
 
 # KDE Plasma
 xorg-server
-xorg-xinit
+#xorg-xinit
 #xorg-apps
 plasma-desktop
-plasma-nm
-plasma-pa
-powerdevil
+#plasma-nm
+#plasma-pa
+#kscreen
+#kinfocenter
+#systemsettings
+#powerdevil
 sddm
 sddm-kcm
 breeze
 breeze-gtk
 kde-gtk-config
-kscreen
-kinfocenter
-systemsettings
+
 
 # Aplicaciones KDE esenciales
 konsole
@@ -80,10 +81,10 @@ which
 sudo
 
 # Fonts
-ttf-dejavu
-ttf-liberation
+#ttf-dejavu
+#ttf-liberation
 noto-fonts
-noto-fonts-emoji
+#noto-fonts-emoji
 #terminus-font
 
 # Archive tools
