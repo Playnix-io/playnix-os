@@ -10,7 +10,7 @@ archiso
 nbd
 
 # Boot
-#syslinux
+syslinux
 efibootmgr
 grub
 #os-prober
