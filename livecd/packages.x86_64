@@ -63,10 +63,10 @@ konsole
 dolphin
 
 # Navegador y multimedia
-firefox
+#firefox
 
 # System tools
-htop
+#htop
 #fastfetch
 git
 #vim
@@ -88,8 +88,8 @@ noto-fonts-emoji
 
 # Archive tools
 #zip
-unzip
-p7zip
+#unzip
+#p7zip
 #unrar
 
 # Live system and installation tools
@@ -100,8 +100,8 @@ parted
 dialog
 
 # Development tools (optional)
-python
-python-pip
+#python
+#python-pip
 
 # Plymouth splash screen
 plymouth
