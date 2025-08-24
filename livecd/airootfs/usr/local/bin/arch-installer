@@ -7,8 +7,8 @@ AVAILABLE_GIB=$(( (TOTAL_SIZE / 1073741824) - 2 ))
 sudo sed -i "s/99999999/$AVAILABLE_GIB/" /etc/archinstall/user_configuration.json
 
 #Playnix packages
-#sudo cp /etc/pacman.conf  /etc/pacman.conf.bak
-#sudo cp /etc/archinstall/pacman.conf /etc/pacman.conf
+sudo cp /etc/pacman.conf  /etc/pacman.conf.bak
+sudo cp /etc/archinstall/pacman.conf /etc/pacman.conf
 
 # PlayNix Arch Linux Installer - Usando archinstall oficial
 sudo archinstall --config /etc/archinstall/user_configuration.json --creds /etc/archinstall/user_credentials.json --silent &
