@@ -13,7 +13,7 @@ nbd
 syslinux
 efibootmgr
 grub
-os-prober
+#os-prober
 
 # Filesystem tools
 dosfstools
@@ -22,20 +22,20 @@ exfatprogs
 btrfs-progs
 xfsprogs
 f2fs-tools
-jfsutils
+#jfsutils
 
 # Network
 networkmanager
 network-manager-applet
 dhcpcd
 wpa_supplicant
-wireless_tools
+#wireless_tools
 iwd
-inetutils
+#inetutils
 dnsutils
 nftables
 iptables-nft
-reflector
+#reflector
 
 # Hardware support
 mesa
@@ -44,7 +44,7 @@ xf86-video-vesa
 # KDE Plasma
 xorg-server
 xorg-xinit
-xorg-apps
+#xorg-apps
 plasma-desktop
 plasma-nm
 plasma-pa
@@ -67,15 +67,15 @@ firefox
 
 # System tools
 htop
-fastfetch
+#fastfetch
 git
-vim
+#vim
 nano
 wget
 curl
 rsync
-tree
-lsof
+#tree
+#lsof
 which
 sudo
 
@@ -84,13 +84,13 @@ ttf-dejavu
 ttf-liberation
 noto-fonts
 noto-fonts-emoji
-terminus-font
+#terminus-font
 
 # Archive tools
-zip
+#zip
 unzip
 p7zip
-unrar
+#unrar
 
 # Live system and installation tools
 arch-install-scripts
