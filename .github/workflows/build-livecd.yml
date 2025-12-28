@@ -52,14 +52,6 @@ jobs:
           docker cp arch-builder:/build/archiso-kde/out/. ./iso-output/
           ls -lh ./iso-output/
 
-      - name: Compress ISO with xz
-        run: |
-          sudo apt-get update && sudo apt-get install -y xz-utils
-          for iso in iso-output/*.iso; do
-            xz -z -T0 -9 "$iso"
-          done
-          ls -lh ./iso-output/
-
       - name: Cleanup
         if: always()
         run: |
@@ -70,7 +62,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: arch-kde-livecd
-          path: iso-output/*.iso.xz
+          path: iso-output/*.iso
           retention-days: 30
 
       - name: Create Release
@@ -81,7 +73,7 @@ jobs:
           name: Arch Linux KDE Live CD v${{ github.run_number }}
           body: |
             # 🐧 Arch Linux KDE Live CD
-          files: iso-output/*.iso.xz
+          files: iso-output/*.iso
           draft: false
           prerelease: false
         env:
