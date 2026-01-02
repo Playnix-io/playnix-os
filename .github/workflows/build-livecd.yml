@@ -70,9 +70,9 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ github.run_number }}
-          name: Arch Linux KDE Live CD v${{ github.run_number }}
+          name: PlaynixOS Live CD v${{ github.run_number }}
           body: |
-            # 🐧 Arch Linux KDE Live CD
+            # PlaynixOS Live CD
           files: iso-output/*.iso
           draft: false
           prerelease: false

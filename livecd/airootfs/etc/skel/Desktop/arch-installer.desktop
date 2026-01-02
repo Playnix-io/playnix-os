@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Install Arch Linux
-Comment=Install Arch Linux
+Name=Install PlaynixOS
+Comment=Install PlaynixOS
 Exec=konsole --hold -e sudo arch-installer
 Icon=system-software-install
 Terminal=false

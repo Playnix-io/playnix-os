@@ -18,7 +18,7 @@ echo "                              ██║  ██╗██████╔╝
 echo "                              ╚═╝  ╚═╝╚═════╝ ╚══════╝"
 echo -e "\033[0m"
 echo ""
-echo -e "\033[1;32m               🐧 Arch Linux KDE Live CD - Loading...\033[0m"
+echo -e "\033[1;32m               PlaynixOS KDE Live CD - Loading...\033[0m"
 echo ""
 echo -e "\033[1;33m               Please stand by...\033[0m"
 echo ""

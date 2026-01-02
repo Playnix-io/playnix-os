@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-iso_name="archlinux-kde"
+iso_name="playnixOS-kde"
 iso_label="ARCH_KDE_$(date +%Y%m)"
-iso_publisher="Arch Linux KDE Live"
-iso_application="Arch Linux KDE Live CD"
+iso_publisher="PlaynixOS KDE Live"
+iso_application="PlaynixOS KDE Live CD"
 iso_version="$(date +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=("iso")

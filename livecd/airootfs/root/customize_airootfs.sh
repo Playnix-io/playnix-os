@@ -46,8 +46,8 @@ mkdir -p /home/liveuser
 cat >> /home/liveuser/.bashrc << EOF
 alias ll="ls -la"
 clear
-echo -e "\033[1;34m=== 🐧 Arch Linux KDE Live CD ===\033[0m"
-echo -e "\033[1;32mWelcome to the Arch Linux KDE Live system\033[0m"
+echo -e "\033[1;34m=== PlaynixOS KDE Live CD ===\033[0m"
+echo -e "\033[1;32mWelcome to the PlaynixOS KDE Live system\033[0m"
 echo -e "\033[0;36mCurrent user: liveuser (no password)\033[0m"
 echo -e "\033[0;36mTo install: Run the installer from the desktop\033[0m"
 echo ""
