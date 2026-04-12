@@ -21,8 +21,10 @@ EOF
 
 # Dark Breeze theme
 mkdir -p "$HOME/.config"
-echo "[KDE]" >> "$HOME/.config/kdeglobals"
-echo "LookAndFeelPackage=org.kde.breezedark.desktop" >> "$HOME/.config/kdeglobals"
+if ! grep -q "LookAndFeelPackage=org.kde.breezedark.desktop" "$HOME/.config/kdeglobals" 2>/dev/null; then
+  echo "[KDE]" >> "$HOME/.config/kdeglobals"
+  echo "LookAndFeelPackage=org.kde.breezedark.desktop" >> "$HOME/.config/kdeglobals"
+fi
 
 # Desktop shortcuts
 mkdir -p "$HOME/Desktop"

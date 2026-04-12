@@ -11,4 +11,4 @@ TTYPath=/dev/tty1
 RemainAfterExit=yes
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=graphical.target

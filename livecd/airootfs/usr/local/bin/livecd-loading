@@ -32,13 +32,13 @@ for i in {1..100}; do
   elif [ $i -eq 40 ]; then
     echo -e "\n\033[0;36m   » Detecting hardware...\033[0m"
   elif [ $i -eq 60 ]; then
-    echo -e "\n\033[0;36m   » Setting up red...\033[0m"
+    echo -e "\n\033[0;36m   » Setting up network...\033[0m"
   elif [ $i -eq 80 ]; then
     echo -e "\n\033[0;36m   » Starting GUI...\033[0m"
   fi
 done
 
-echo -e "\n\n\033[1;32m   ✓ Sistema loaded\033[0m"
+echo -e "\n\n\033[1;32m   ✓ System loaded\033[0m"
 echo -e "\033[1;37m   Usuario: liveuser (no password)\033[0m"
 echo ""
 sleep 2

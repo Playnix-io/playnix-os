@@ -1,28 +1,32 @@
 #!/bin/bash
+set -e
 
 DEVICE="/dev/nvme0n1"
-TOTAL_SIZE=$(sudo blockdev --getsize64 $DEVICE)
+TOTAL_SIZE=$(sudo blockdev --getsize64 "$DEVICE")
 AVAILABLE_GIB=$(( (TOTAL_SIZE / 1073741824) - 2 ))
 
 sudo sed -i "s/99999999/$AVAILABLE_GIB/" /etc/archinstall/user_configuration.json
 
-#Playnix packages
-#sudo cp /etc/pacman.conf  /etc/pacman.conf.bak
-#sudo cp /etc/archinstall/pacman.conf /etc/pacman.conf
+# Use frozen pacman.conf (archive repos)
+sudo cp /etc/pacman.conf /etc/pacman.conf.bak
+sudo cp /etc/archinstall/pacman.conf /etc/pacman.conf
 
 # PlayNix Arch Linux Installer - Usando archinstall oficial
-sudo archinstall --config /etc/archinstall/user_configuration.json --creds /etc/archinstall/user_credentials.json --silent &
-wait $!
+sudo archinstall --config /etc/archinstall/user_configuration.json --creds /etc/archinstall/user_credentials.json --silent
+
+if ! mountpoint -q /mnt; then
+  echo "Error: archinstall did not mount /mnt. Installation may have failed."
+  exit 1
+fi
 
 # Dark Breeze theme
+sudo mount --types proc /proc /mnt/proc
+sudo mount --rbind /sys /mnt/sys
+sudo mount --rbind /dev /mnt/dev
+sudo mount --make-rslave /mnt/sys
+sudo mount --make-rslave /mnt/dev
 
-mount --types proc /proc /mnt/proc
-mount --rbind /sys /mnt/sys
-mount --rbind /dev /mnt/dev
-mount --make-rslave /mnt/sys
-mount --make-rslave /mnt/dev
-
-mkdir -p /mnt/etc/archinstall/
-cp /etc/archinstall/* /mnt/etc/archinstall/
-chmod +x /mnt/etc/archinstall/post_install.sh
-arch-chroot /mnt /etc/archinstall/post_install.sh
+sudo mkdir -p /mnt/etc/archinstall/
+sudo cp /etc/archinstall/* /mnt/etc/archinstall/
+sudo chmod +x /mnt/etc/archinstall/post_install.sh
+sudo arch-chroot /mnt /etc/archinstall/post_install.sh

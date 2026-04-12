@@ -73,7 +73,7 @@
       }
     ]
   },
-  "hostname": "archlinux",
+  "hostname": "playnix",
   "kernels": ["linux"],
   "locale_config": {
     "kb_layout": "es",
@@ -228,7 +228,7 @@
   },
   "ntp": true,
   "packages": ["base-devel", "curl", "go", "firefox", "git", "nano", "plymouth", "gwenview", "zenity"],
-  "parallel_downloads": 0,
+  "parallel_downloads": 10,
   "profile_config": {
     "gfx_driver": "AMD / ATI (open-source)",
     "greeter": "sddm",
